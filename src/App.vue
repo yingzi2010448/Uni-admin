@@ -1,32 +1,39 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view></router-view>
+
   </div>
 </template>
 
+<script>
+
+export default {
+  name: 'app',
+  components: {
+
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+::-webkit-scrollbar-track
+{
+  background: rgba(0,0,0,.1);
+  border-radius: 0;
 }
 
-#nav {
-  padding: 30px;
+::-webkit-scrollbar
+{
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+::-webkit-scrollbar-thumb
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background: rgba(0,0,0,.25);
+    transition: color .2s ease;
 }
 </style>
